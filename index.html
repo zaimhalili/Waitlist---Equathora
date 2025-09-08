@@ -1,20 +1,419 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" type="image/x-icon" href="./images/studying.svg">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Equathora</title>
     <style>
-        :root{
-            
+        @import url('https://fonts.googleapis.com/css2?family=DynaPuff:wght@400..700&family=Inter:ital,wght@0,100..900;1,100..900&family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+        :root {
+            --raisin-black: rgb(32, 34, 49);
+            --secondary-color: #2b2d42;
+            --mid-main-secondary: rgb(141, 153, 174);
+            --french-gray: #bdc6d1ff;
+            --main-color: rgb(237, 242, 244);
+            --really-light-accent: #ee8b98ff;
+            --light-accent-color: rgb(239, 35, 60);
+            --accent-color: rgb(217, 4, 41);
+            --dark-accent-color: rgb(163, 20, 44);
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Inter', sans-serif;
+            background-color: var(--raisin-black);
+            color: var(--main-color);
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 10rem;
+            background-color: #2b2d4278;
+            backdrop-filter: blur(10px);
+            flex-wrap: wrap;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-family: 'DynaPuff', cursive;
+            font-weight: 600;
+            font-size: 2rem;
+            color: var(--accent-color);
+        }
+
+        nav a {
+            margin-left: 2rem;
+            font-weight: 600;
+            font-size: 1.2rem;
+            color: var(--main-color);
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--light-accent-color);
+        }
+
+        .hero {
+            display: flex;
+            flex-direction: column-reverse;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 4rem 10rem;
+            background: linear-gradient(135deg, var(--raisin-black) 0%, var(--secondary-color) 100%);
+        }
+
+        .hero h1 {
+            font-family: 'Public Sans', cursive;
+            font-size: clamp(2rem, 5vw, 4rem);
+            color: var(--main-color);
+            margin-bottom: 1rem;
+            line-height: 1.1;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin: 1rem 0;
+            padding: 0 5rem 5rem 0;
+            color: var(--french-gray);
+        }
+
+        .hero img {
+            max-width: 600px;
+            width: 80%;
+            margin-bottom: 2rem;
+        }
+
+        .btn-primary {
+            background-color: var(--light-accent-color);
+            color: var(--main-color);
+            padding: 0.8rem 2rem;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+
+        .btn-primara {
+            background-color: var(--light-accent-color);
+            color: var(--main-color);
+            padding: 1.5rem 4rem;
+            border-radius: 20px;
+            font-size: clamp(1rem, 5vw, 1.5rem);
+            font-weight: 600;
+            transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
+        }
+
+        .btn-primary:hover,
+        .btn-primara:hover {
+            color: white;
+            background-color: var(--dark-accent-color);
+            transform: translateY(-2px);
+        }
+
+        section {
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2.5rem;
+            justify-items: center;
+            margin-top: 2rem;
+        }
+
+        #features h2 {
+            font-size: clamp(1.5rem, 5vw, 3rem);
+        }
+
+        .feature-card {
+            background-color: var(--french-gray);
+            padding: 2.5rem 2rem;
+            border-radius: 16px;
+            min-width: 300px;
+            text-align: left;
+            transition: transform 0.3s, box-shadow 0.3s;
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            text-align: center;
+            flex-direction: column;
+        }
+
+        .feature-card:hover {
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.45);
+        }
+
+        .feature-card img {
+            width: 180px;
+            margin-bottom: 1rem;
+        }
+
+        .feature-card h3 {
+            font-size: clamp(1, 6rem, 3.5vw, 1.8rem);
+            margin-bottom: 0.75rem;
+            color: var(--dark-accent-color);
+        }
+
+        .feature-card p {
+            font-size: clamp(1.1rem, 3vw, 1.2rem);
+            line-height: 1.6;
+            color: var(--raisin-black);
+            margin-bottom: 1rem;
+        }
+
+        .feature-card .btn-primary {
+            display: inline-block;
+            margin-top: 1rem;
+        }
+
+        #trust h2 {
+            font-size: clamp(1.5rem, 5vw, 3rem);
+        }
+
+        #trust p {
+            font-size: clamp(1.2rem, 3vw, 1.5rem);
+            color: var(--french-gray);
+        }
+
+        .testimonials {
+            display: flex;
+        }
+
+        .std-review {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            text-align: center;
+            font-size: clamp(1.1rem, 3vw, 1.2rem);
+        }
+
+        footer {
+            background-color: var(--secondary-color);
+            padding: 2rem;
+            text-align: center;
+            font-size: 0.9rem;
+            color: var(--mid-main-secondary);
+        }
+
+        @media (min-width: 768px) {
+            .hero {
+                flex-direction: row;
+                text-align: left;
+            }
+
+            .hero img {
+                margin: 0 2rem;
+            }
         }
     </style>
+
 </head>
+
 <body>
-    
+    <header>
+        <div class="logo">equathora</div>
+        <nav>
+            <a href="#features">Features</a>
+            <a href="#trust">Trusted by</a>
+            <a class="btn-primary"
+                href="https://docs.google.com/forms/d/e/1FAIpQLSdLLApMvE_dJdllHd0U4YxFFQ6K7YasS4I-xO1mDG9SFCariw/viewform"
+                target="_blank">Join Waitlist</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div>
+            <h1>Turn Logic into your superpower</h1>
+            <p>Join Equathora, a platform for high-level math and logic problems. Solve challenges, earn achievements,
+                climb
+                leaderboards, and get mentorship as you grow. <br>
+                Trusted by over <strong>1000 students</strong> worldwide.</p>
+            <a class="btn-primara" href="YOUR_GOOGLE_FORM_LINK_HERE" target="_blank">Get Started</a>
+        </div>
+        <img src="./images/studying.svg" alt="Equathora Illustration">
+    </section>
+
+    <section id="features">
+        <h2>Features That Level Up Your Learning</h2>
+        <div class="features">
+            <div class="feature-card">
+                <img src="./images/achievementsDD.svg" alt="Topic-Based Challenges Icon">
+                <h3>Topic-Based Challenges</h3>
+                <p>Focus on specific math and logic topics that matter. Start with foundational problems and
+                    progressively
+                    tackle advanced challenges. Every problem is designed to build your skills step by step.</p>
+                <p>Practice online with <strong>instant feedback</strong> so you know exactly where you excel and where
+                    to
+                    improve.</p>
+                <p>Earn points for completing challenges and track your mastery over each topic!</p>
+                <a class="btn-primary"
+                    href="https://docs.google.com/forms/d/e/1FAIpQLSdLLApMvE_dJdllHd0U4YxFFQ6K7YasS4I-xO1mDG9SFCariw/viewform"
+                    target="_blank">Try This Feature</a>
+            </div>
+
+            <div class="feature-card">
+                <img src="./images/mentoring.svg" alt="Mentor Guidance Icon">
+                <h3>Mentor Guidance</h3>
+                <p>Receive detailed feedback from experienced mentors. Whether you're stuck on a problem or want to
+                    check
+                    your solutions, mentors guide you step by step, explaining strategies and shortcuts.</p>
+                <p>Flexible interaction lets you choose quick hints or deep reviews depending on your learning pace.</p>
+                <p>Gain insider tips and learn problem-solving techniques like a pro.</p>
+                <a class="btn-primary"
+                    href="https://docs.google.com/forms/d/e/1FAIpQLSdLLApMvE_dJdllHd0U4YxFFQ6K7YasS4I-xO1mDG9SFCariw/viewform"
+                    target="_blank">Meet Your Mentor</a>
+            </div>
+
+            <div class="feature-card">
+                <img src="./images/leaderboards.svg" alt="Achievements & Gamification Icon">
+                <h3>Achievements & Gamification</h3>
+                <p>Stay motivated with a gamified learning experience. Earn points, unlock badges, and climb
+                    leaderboards as
+                    you solve more problems.</p>
+                <p>Our platform tracks your progress and adjusts difficulty to match your skill level.</p>
+                <p>Collect achievements to show off your skills and stay challenged daily.</p>
+                <a class="btn-primary"
+                    href="https://docs.google.com/forms/d/e/1FAIpQLSdLLApMvE_dJdllHd0U4YxFFQ6K7YasS4I-xO1mDG9SFCariw/viewform"
+                    target="_blank">Start Earning Badges</a>
+            </div>
+
+            <div class="feature-card">
+                <img src="./images/teacher.svg" alt="Interactive Online Solving Icon">
+                <h3>Interactive Online Solving</h3>
+                <p>Solve problems directly in the browser with our intuitive editor. Receive instant feedback, hints,
+                    and
+                    complete solutions without leaving the platform.</p>
+                <p>Practice actively rather than passively—your brain will retain concepts faster.</p>
+                <p>Step into challenges designed like games with levels, achievements, and rewards.</p>
+                <a class="btn-primary"
+                    href="https://docs.google.com/forms/d/e/1FAIpQLSdLLApMvE_dJdllHd0U4YxFFQ6K7YasS4I-xO1mDG9SFCariw/viewform"
+                    target="_blank">Solve In The Browser</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="trust" class="trust">
+        <h2>Trusted by Learners Worldwide</h2>
+        <p>Join a growing community of over <strong>1000 students</strong> mastering advanced problem-solving skills
+            with
+            Equathora.</p>
+
+        <!-- Social proof / testimonials -->
+        <div class="testimonials"
+            style="display:flex; flex-wrap:wrap; justify-content:center; gap:2rem; margin-top:2rem;">
+            <div class="std-review"
+                style="background-color:var(--secondary-color); padding:1.5rem; border-radius:12px; flex-grow: 1; text-align:left; box-shadow:0 4px 10px rgba(0,0,0,0.3);">
+                <p>"Equathora made learning advanced math fun and interactive. I leveled up my problem-solving skills in
+                    just weeks!"</p>
+                <strong>- Sofia Reyes</strong>
+            </div>
+            <div class="std-review"
+                style="background-color:var(--secondary-color); padding:1.5rem; border-radius:12px;flex-grow: 1; text-align:left; box-shadow:0 4px 10px rgba(0,0,0,0.3);">
+                <p>"The mentors are fantastic. I get instant guidance and hints that really help me understand tough
+                    problems."</p>
+                <strong>- Kael Thorne</strong>
+            </div>
+            <div class="std-review"
+                style="background-color:var(--secondary-color); padding:1.5rem; border-radius:12px; flex-grow: 1; text-align:left; box-shadow:0 4px 10px rgba(0,0,0,0.3);">
+                <p>"The achievements and badges make learning addictive. I feel rewarded every time I complete a
+                    challenge."
+                </p>
+                <strong>- Lucian Ferris</strong>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats / counters -->
+    <section style="padding:4rem 2rem; text-align:center; background-color:var(--raisin-black);">
+        <h2>Numbers That Speak</h2>
+        <div style="display:flex; justify-content:center; gap:3rem; flex-wrap:wrap; margin-top:2rem;">
+            <div>
+                <h3 style="color:var(--accent-color); font-size:2rem;">1000+</h3>
+                <p>Students</p>
+            </div>
+            <div>
+                <h3 style="color:var(--accent-color); font-size:2rem;">5000+</h3>
+                <p>Problems Solved</p>
+            </div>
+            <div>
+                <h3 style="color:var(--accent-color); font-size:2rem;">50+</h3>
+                <p>Mentors Online</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Step-by-step learning flow -->
+    <section style="padding:4rem 2rem; text-align:center;">
+        <h2>How It Works</h2>
+        <div style="display:flex; flex-wrap:wrap; justify-content:center; gap:3rem; margin-top:2rem;">
+            <div style="max-width:250px;">
+                <img src="placeholder-step1.png" alt="Step 1" style="width:100%; margin-bottom:1rem;">
+                <h3>Learn</h3>
+                <p>Choose a topic and start solving problems designed to teach concepts progressively.</p>
+            </div>
+            <div style="max-width:250px;">
+                <img src="placeholder-step2.png" alt="Step 2" style="width:100%; margin-bottom:1rem;">
+                <h3>Practice</h3>
+                <p>Solve challenges online with instant feedback and hints from mentors.</p>
+            </div>
+            <div style="max-width:250px;">
+                <img src="placeholder-step3.png" alt="Step 3" style="width:100%; margin-bottom:1rem;">
+                <h3>Earn Achievements</h3>
+                <p>Collect badges, points, and track your mastery as you progress through levels.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Step-by-step learning flow -->
+
+
+    <!-- Scarcity / CTA section -->
+    <section
+        style="padding:4rem 2rem; text-align:center; background-color:var(--secondary-color); border-radius:12px; margin:2rem;">
+        <h2>Start Your Journey Today</h2>
+        <p>Mentor spots are limited and early access gives you bonus achievements. Don’t miss out!</p>
+        <a class="btn-primary"
+            href="https://docs.google.com/forms/d/e/1FAIpQLSdLLApMvE_dJdllHd0U4YxFFQ6K7YasS4I-xO1mDG9SFCariw/viewform"
+            target="_blank">Join the Waitlist</a>
+    </section>
+
+    <footer>
+        &copy; 2025 Equathora. All rights reserved. | <a
+            href="https://docs.google.com/forms/d/e/1FAIpQLSdLLApMvE_dJdllHd0U4YxFFQ6K7YasS4I-xO1mDG9SFCariw/viewform"
+            target="_blank">Join the
+            Waitlist</a>
+    </footer>
 
     <script>
-
+        // Optional: Smooth scroll for navbar links
+        document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
+            });
+        });
     </script>
 </body>
+
 </html>
