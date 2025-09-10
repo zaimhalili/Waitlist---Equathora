@@ -28,7 +28,7 @@
         body {
             margin: 0;
             font-family: 'Inter', sans-serif;
-            background-color: var(--raisin-black);
+            background: linear-gradient(180deg, var(--raisin-black) 20%, var(--main-color));
             color: var(--main-color);
             line-height: 1.6;
         }
@@ -55,7 +55,7 @@
             font-family: 'DynaPuff', cursive;
             font-weight: 600;
             font-size: 2rem;
-            color: var(--accent-color);
+            color: var(--main-color);
         }
 
         nav a {
@@ -77,7 +77,9 @@
             justify-content: center;
             text-align: center;
             padding: 4rem 10rem;
-            background: linear-gradient(135deg, var(--raisin-black) 0%, var(--secondary-color) 100%);
+            background: linear-gradient(135deg, var(--raisin-black) 5%, var(--main-color) 100%);
+            border-bottom-left-radius: 15%;
+            border-bottom-right-radius: 15%;
         }
 
         .hero h1 {
@@ -86,6 +88,8 @@
             color: var(--main-color);
             margin-bottom: 1rem;
             line-height: 1.1;
+            cursor: default;
+
         }
 
         .hero p {
@@ -93,6 +97,8 @@
             margin: 1rem 0;
             padding: 0 5rem 5rem 0;
             color: var(--french-gray);
+            cursor: default;
+
         }
 
         .hero img {
@@ -140,8 +146,13 @@
             margin-top: 2rem;
         }
 
+        #features {
+            background-color: transparent;
+        }
+
         #features h2 {
             font-size: clamp(1.5rem, 5vw, 3rem);
+            cursor: default;
         }
 
         .feature-card {
@@ -157,6 +168,7 @@
             align-items: center;
             text-align: center;
             flex-direction: column;
+            cursor: default;
         }
 
         .feature-card:hover {
@@ -188,15 +200,17 @@
 
         #trust h2 {
             font-size: clamp(1.5rem, 5vw, 3rem);
+            cursor: default;
         }
 
         #trust p {
             font-size: clamp(1.2rem, 3vw, 1.5rem);
             color: var(--french-gray);
+            cursor: default;
         }
 
         .testimonials {
-            display: flex;
+            cursor: default;
         }
 
         .std-review {
@@ -216,6 +230,10 @@
             color: var(--mid-main-secondary);
         }
 
+        h3{
+            margin: 0;
+        }
+
         @media (min-width: 768px) {
             .hero {
                 flex-direction: row;
@@ -232,7 +250,7 @@
 
 <body>
     <header>
-        <div class="logo">equathora</div>
+        <a href="index.html" class="logo">equathora</a>
         <nav>
             <a href="#features">Features</a>
             <a href="#trust">Trusted by</a>
@@ -323,79 +341,102 @@
         <div class="testimonials"
             style="display:flex; flex-wrap:wrap; justify-content:center; gap:2rem; margin-top:2rem;">
             <div class="std-review"
-                style="background-color:var(--secondary-color); padding:1.5rem; border-radius:12px; flex-grow: 1; text-align:left; box-shadow:0 4px 10px rgba(0,0,0,0.3);">
+                style="background-color:var(--secondary-color); padding:1.5rem; border-radius:12px; flex-grow: 1; max-width:500px; text-align:left; box-shadow:0 4px 10px rgba(0,0,0,0.3);">
                 <p>"Equathora made learning advanced math fun and interactive. I leveled up my problem-solving skills in
                     just weeks!"</p>
-                <strong>- Sofia Reyes</strong>
+                <strong>- Sofia Masini</strong>
             </div>
             <div class="std-review"
-                style="background-color:var(--secondary-color); padding:1.5rem; border-radius:12px;flex-grow: 1; text-align:left; box-shadow:0 4px 10px rgba(0,0,0,0.3);">
+                style="background-color:var(--secondary-color); padding:1.5rem; border-radius:12px;flex-grow: 1; max-width:500px;  text-align:left; box-shadow:0 4px 10px rgba(0,0,0,0.3);">
                 <p>"The mentors are fantastic. I get instant guidance and hints that really help me understand tough
                     problems."</p>
                 <strong>- Kael Thorne</strong>
             </div>
             <div class="std-review"
-                style="background-color:var(--secondary-color); padding:1.5rem; border-radius:12px; flex-grow: 1; text-align:left; box-shadow:0 4px 10px rgba(0,0,0,0.3);">
+                style="background-color:var(--secondary-color); padding:1.5rem; border-radius:12px; flex-grow: 1; max-width:500px;  text-align:left; box-shadow:0 4px 10px rgba(0,0,0,0.3);">
                 <p>"The achievements and badges make learning addictive. I feel rewarded every time I complete a
                     challenge."
                 </p>
-                <strong>- Lucian Ferris</strong>
+                <strong>- Marco Barozzi</strong>
             </div>
         </div>
     </section>
 
     <!-- Stats / counters -->
-    <section style="padding:4rem 2rem; text-align:center; background-color:var(--raisin-black);">
-        <h2>Numbers That Speak</h2>
-        <div style="display:flex; justify-content:center; gap:3rem; flex-wrap:wrap; margin-top:2rem;">
-            <div>
-                <h3 style="color:var(--accent-color); font-size:2rem;">1000+</h3>
-                <p>Students</p>
+    <section style="padding:4rem 2rem; text-align:center; background-color:transparent;">
+        <h2 style="font-size: clamp(1.5rem, 5vw, 3rem);">Numbers That Speak</h2>
+        <div
+            style="display:flex; justify-content:center; gap:3rem; flex-wrap:wrap; margin-top:2rem; text-align: center;">
+            <div style="width: 300px;">
+                <h3 style="color:var(--raisin-black); font-size:3rem;">500+</h3>
+                <p style="font-size: clamp(1.5rem, 3vw, 2rem);">Students</p>
             </div>
-            <div>
-                <h3 style="color:var(--accent-color); font-size:2rem;">5000+</h3>
-                <p>Problems Solved</p>
+            <div style="width: 300px;">
+                <h3 style="color:var(--raisin-black); font-size:3rem;">2000+</h3>
+                <p style="font-size: clamp(1.5rem, 3vw, 2rem);">Problems Solved</p>
             </div>
-            <div>
-                <h3 style="color:var(--accent-color); font-size:2rem;">50+</h3>
-                <p>Mentors Online</p>
+            <div style="width: 300px;">
+                <h3 style="color:var(--raisin-black); font-size:3rem;">50+</h3>
+                <p style="font-size: clamp(1.5rem, 3vw, 2rem);">Online Mentors</p>
             </div>
         </div>
     </section>
 
     <!-- Step-by-step learning flow -->
     <section style="padding:4rem 2rem; text-align:center;">
-        <h2>How It Works</h2>
+        <h2 style="font-size: clamp(1.5rem, 5vw, 3rem);">How It Works</h2>
         <div style="display:flex; flex-wrap:wrap; justify-content:center; gap:3rem; margin-top:2rem;">
-            <div style="max-width:250px;">
-                <img src="placeholder-step1.png" alt="Step 1" style="width:100%; margin-bottom:1rem;">
-                <h3>Learn</h3>
-                <p>Choose a topic and start solving problems designed to teach concepts progressively.</p>
+
+            <div
+                style="max-width:400px;height: 600px; display: flex; flex-direction: column;justify-content: space-evenly; align-items: center; border: 2px solid var(--main-color); border-radius: 20px; padding: 2rem;">
+                <img src="./images/learningBooks.svg" alt="Step 1" style="height: 20%; margin-bottom:1rem;">
+                <h3 style="color:var(--accent-color); font-size:3rem; margin: 0; font-family: 'DynaPuff', cursive; font-weight: 400;">
+                    Learn
+                </h3>
+                <p style="font-size: clamp(1.1rem, 3vw, 1.4rem); color: var(--secondary-color);">
+                    Choose a topic and start solving problems designed to teach concepts progressively.
+                </p>
             </div>
-            <div style="max-width:250px;">
-                <img src="placeholder-step2.png" alt="Step 2" style="width:100%; margin-bottom:1rem;">
-                <h3>Practice</h3>
-                <p>Solve challenges online with instant feedback and hints from mentors.</p>
+
+
+            <div
+                style="max-width:400px;height: 600px;  padding: 2rem;display: flex; flex-direction: column;justify-content: space-evenly; align-items: center; border: 2px solid var(--main-color); border-radius: 20px;">
+                <img src="./images/studying.svg" alt="Step 2" style="height: 20%; margin-bottom:1rem;">
+                <h3 style="color:var(--accent-color); font-size:3rem; margin: 0; font-family: 'DynaPuff', cursive; font-weight: 400;">
+                    Practice
+                </h3>
+                <p style="font-size: clamp(1.1rem, 3vw, 1.4rem); color: var(--secondary-color);">
+                    Solve challenges online with instant feedback and hints from mentors.
+                </p>
             </div>
-            <div style="max-width:250px;">
-                <img src="placeholder-step3.png" alt="Step 3" style="width:100%; margin-bottom:1rem;">
-                <h3>Earn Achievements</h3>
-                <p>Collect badges, points, and track your mastery as you progress through levels.</p>
+
+
+            <div
+                style="max-width:400px; height: 600px;  padding: 2rem;display: flex; flex-direction: column;justify-content: space-evenly; align-items: center;border: 2px solid var(--main-color); border-radius: 20px;">
+                <img src="./images/achievementsDD.svg" alt="Step 3" style="height: 20%;margin-bottom:1rem;">
+                <h3 style="color:var(--accent-color); font-size:3rem; margin: 0; font-family: 'DynaPuff', cursive; font-weight: 400;">
+                    Achieve
+
+                </h3>
+                <p style="font-size: clamp(1.1rem, 3vw, 1.4rem); color: var(--secondary-color);">
+                    Collect badges, points, and track your mastery as you progress through levels.
+                </p>
             </div>
         </div>
     </section>
 
-    <!-- Step-by-step learning flow -->
-
-
-    <!-- Scarcity / CTA section -->
     <section
-        style="padding:4rem 2rem; text-align:center; background-color:var(--secondary-color); border-radius:12px; margin:2rem;">
+        style="padding:2rem 2rem; text-align:center; background-color:var(--secondary-color); border-radius:12px; margin:2rem; height: auto; display: flex; flex-direction: column; justify-content: space-around;">
+
         <h2>Start Your Journey Today</h2>
-        <p>Mentor spots are limited and early access gives you bonus achievements. Don’t miss out!</p>
+
+        <p style="color: goldenrod; font-size: clamp(1.2rem, 3vw, 1.5rem);">Mentor spots are limited and early access <br>
+            gives you bonus achievements. Don't miss out!</p>
+
         <a class="btn-primary"
             href="https://docs.google.com/forms/d/e/1FAIpQLSdLLApMvE_dJdllHd0U4YxFFQ6K7YasS4I-xO1mDG9SFCariw/viewform"
-            target="_blank">Join the Waitlist</a>
+            target="_blank" style="font-size: 1.7rem;">Join the Waitlist</a>
+
     </section>
 
     <footer>
