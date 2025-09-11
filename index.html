@@ -49,6 +49,7 @@
             position: fixed;
             top: 0;
             z-index: 1000;
+            background-color: #2b2d42c9;
         }
 
         .logo {
@@ -107,6 +108,9 @@
 
         .left {
             width: 60%;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
         }
 
         .btn-primary {
@@ -121,14 +125,26 @@
         .btn-primara {
             background-color: var(--light-accent-color);
             color: var(--main-color);
-            width: 100%;
-            padding: 1.5rem 4rem;
+            width: 40%;
+            padding: 1rem 4rem;
             border-radius: 20px;
             font-size: clamp(1rem, 5vw, 1.5rem);
             font-weight: 600;
             transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
         }
 
+        .btn-primari {
+            background-color: var(--light-accent-color);
+            color: var(--main-color);
+            width: 100%;
+            padding: 1rem 4rem;
+            border-radius: 20px;
+            font-size: clamp(1rem, 5vw, 1.5rem);
+            font-weight: 600;
+            transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
+        }
+
+        .btn-primari:hover,
         .btn-primary:hover,
         .btn-primara:hover {
             color: white;
@@ -180,12 +196,10 @@
 
         .feature-card img {
             width: 180px;
-            margin-bottom: 1rem;
         }
 
         .feature-card h3 {
             font-size: clamp(1, 6rem, 3.5vw, 1.8rem);
-            margin-bottom: 0.75rem;
             color: var(--dark-accent-color);
         }
 
@@ -193,7 +207,7 @@
             font-size: clamp(1.1rem, 3vw, 1.2rem);
             line-height: 1.6;
             color: var(--raisin-black);
-            margin-bottom: 1rem;
+            margin-bottom: 0.3rem;
         }
 
         .feature-card .btn-primary {
@@ -237,27 +251,18 @@
             margin: 0;
         }
 
-        @media (max-width: 768px) {
+        @media (max-width: 888px) {
             header {
                 display: flex;
-                flex-direction: column;
-                justify-content: space-between;
-                align-items: center;
-                padding: 1rem 10rem;
-                width: 100%;
-                backdrop-filter: blur(10px);
-                flex-wrap: wrap;
-                position: fixed;
-                top: 0;
-                z-index: 1000;
+                justify-content: center;
                 background-color: #2b2d42c9;
             }
 
-            .logo{
+            .logo {
                 color: white;
             }
 
-            .navbarLink{
+            .navbarLink {
                 display: none;
             }
 
@@ -285,16 +290,21 @@
 
             .left {
                 width: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
             }
 
             .btn-primary {
-               display: none;
+                display: none;
             }
 
             .btn-primara {
                 background-color: var(--light-accent-color);
                 color: var(--main-color);
-                padding: 1.5rem 4rem;
+                width: 100%;
+                text-align: center;
+                padding: 1rem 2rem;
             }
         }
     </style>
@@ -319,7 +329,7 @@
             <p>Join Equathora, a platform for high-level math and logic problems. Solve challenges, earn achievements,
                 climb
                 leaderboards, and get mentorship as you grow. <br>
-                Trusted by over <strong>1000 students</strong> worldwide.</p>
+                Trusted by over <span style="color: white;"><strong>1000 students</strong></span> worldwide.</p>
             <a class="btn-primara" href="YOUR_GOOGLE_FORM_LINK_HERE" target="_blank">Get Started</a>
         </div>
         <img src="./images/studying.svg" alt="Equathora Illustration">
@@ -330,14 +340,13 @@
         <div class="features">
             <div class="feature-card">
                 <img src="./images/achievementsDD.svg" alt="Topic-Based Challenges Icon">
-                <h3>Topic-Based Challenges</h3>
-                <p>Focus on specific math and logic topics that matter. Start with foundational problems and
-                    progressively
-                    tackle advanced challenges. Every problem is designed to build your skills step by step.</p>
-                <p>Practice online with <strong>instant feedback</strong> so you know exactly where you excel and where
-                    to
-                    improve.</p>
-                <p>Earn points for completing challenges and track your mastery over each topic!</p>
+                <div>
+                    <h3>Topic-Based Challenges</h3>
+                    <p>Master math and logic with Equatora. Start from foundations and progress to advanced challenges
+                        step by step. Get
+                        instant <strong>feedback</strong>, earn <strong>points</strong>, and <strong>track your mastery</strong> across every topic.</p>
+                </div>
+
                 <a class="btn-primary"
                     href="https://docs.google.com/forms/d/e/1FAIpQLSdLLApMvE_dJdllHd0U4YxFFQ6K7YasS4I-xO1mDG9SFCariw/viewform"
                     target="_blank">Try This Feature</a>
@@ -345,12 +354,15 @@
 
             <div class="feature-card">
                 <img src="./images/mentoring.svg" alt="Mentor Guidance Icon">
-                <h3>Mentor Guidance</h3>
-                <p>Receive detailed feedback from experienced mentors. Whether you're stuck on a problem or want to
-                    check
-                    your solutions, mentors guide you step by step, explaining strategies and shortcuts.</p>
-                <p>Flexible interaction lets you choose quick hints or deep reviews depending on your learning pace.</p>
-                <p>Gain insider tips and learn problem-solving techniques like a pro.</p>
+                <div>
+                    <h3>Mentor Guidance</h3>
+                    <p>Get guidance from experienced mentors. Stuck on a problem or checking solutions? <strong>Mentors explain</strong>
+                        strategies and
+                        shortcuts step by step. <strong>Choose quick hints</strong> or deep reviews, and pick up insider tips to solve
+                        problems like a pro.
+                    </p>
+                </div>
+
                 <a class="btn-primary"
                     href="https://docs.google.com/forms/d/e/1FAIpQLSdLLApMvE_dJdllHd0U4YxFFQ6K7YasS4I-xO1mDG9SFCariw/viewform"
                     target="_blank">Meet Your Mentor</a>
@@ -358,12 +370,14 @@
 
             <div class="feature-card">
                 <img src="./images/leaderboards.svg" alt="Achievements & Gamification Icon">
-                <h3>Achievements & Gamification</h3>
-                <p>Stay motivated with a gamified learning experience. Earn points, unlock badges, and climb
-                    leaderboards as
-                    you solve more problems.</p>
-                <p>Our platform tracks your progress and adjusts difficulty to match your skill level.</p>
-                <p>Collect achievements to show off your skills and stay challenged daily.</p>
+                <div>
+                    <h3>Achievements & Gamification</h3>
+                    <p>Stay <strong>motivated</strong> with gamified learning. Earn points, unlock badges, and climb leaderboards as you
+                        progress. Track your
+                        growth, <strong>face challenges</strong> that match your level, and collect achievements to showcase your skills.
+                    </p>
+                </div>
+
                 <a class="btn-primary"
                     href="https://docs.google.com/forms/d/e/1FAIpQLSdLLApMvE_dJdllHd0U4YxFFQ6K7YasS4I-xO1mDG9SFCariw/viewform"
                     target="_blank">Start Earning Badges</a>
@@ -371,12 +385,15 @@
 
             <div class="feature-card">
                 <img src="./images/teacher.svg" alt="Interactive Online Solving Icon">
-                <h3>Interactive Online Solving</h3>
-                <p>Solve problems directly in the browser with our intuitive editor. Receive instant feedback, hints,
-                    and
-                    complete solutions without leaving the platform.</p>
-                <p>Practice actively rather than passively—your brain will retain concepts faster.</p>
-                <p>Step into challenges designed like games with levels, achievements, and rewards.</p>
+                <div>
+                    <h3>Interactive Online Solving</h3>
+                    <p>Practice smarter in your browser. Solve problems with our editor and get instant feedback, hints,
+                        and solutions.
+                        Learn
+                        actively, <strong>retain concepts faster</strong>, and enjoy <strong>game-like challenges</strong> with levels, achievements, and
+                        rewards.</p>
+                </div>
+
                 <a class="btn-primary"
                     href="https://docs.google.com/forms/d/e/1FAIpQLSdLLApMvE_dJdllHd0U4YxFFQ6K7YasS4I-xO1mDG9SFCariw/viewform"
                     target="_blank">Solve In The Browser</a>
@@ -486,12 +503,13 @@
 
         <h2 style="margin: 0; font-size: clamp(1.5rem, 4vw, 2rem); font-weight: 600;">Start Your Journey Today</h2>
 
-        <p style="color: goldenrod; font-size: clamp(1.2rem, 3vw, 1.5rem); margin: 0.7rem 0rem 3rem 0;">Mentor spots are limited and early access
+        <p style="color: goldenrod; font-size: clamp(1.2rem, 3vw, 1.5rem); margin: 0.7rem 0rem 3rem 0;">Mentor spots are
+            limited and early access
             <br>
             gives you bonus achievements. Don't miss out!
         </p>
 
-        <a class="btn-primary"
+        <a class="btn-primari"
             href="https://docs.google.com/forms/d/e/1FAIpQLSdLLApMvE_dJdllHd0U4YxFFQ6K7YasS4I-xO1mDG9SFCariw/viewform"
             target="_blank" style="font-size: 1.7rem;">Join the Waitlist</a>
 
