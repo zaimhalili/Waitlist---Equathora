@@ -43,10 +43,10 @@
             justify-content: space-between;
             align-items: center;
             padding: 1rem 10rem;
-            background-color: #2b2d4278;
+            width: 100%;
             backdrop-filter: blur(10px);
             flex-wrap: wrap;
-            position: sticky;
+            position: fixed;
             top: 0;
             z-index: 1000;
         }
@@ -72,11 +72,10 @@
 
         .hero {
             display: flex;
-            flex-direction: column-reverse;
             align-items: center;
-            justify-content: center;
+            justify-content: flex-start;
             text-align: center;
-            padding: 4rem 10rem;
+            padding: 6rem 10rem;
             background: linear-gradient(135deg, var(--raisin-black) 5%, var(--main-color) 100%);
             border-bottom-left-radius: 15%;
             border-bottom-right-radius: 15%;
@@ -89,22 +88,25 @@
             margin-bottom: 1rem;
             line-height: 1.1;
             cursor: default;
-
+            text-align: start;
         }
 
         .hero p {
             font-size: 1.2rem;
-            margin: 1rem 0;
-            padding: 0 5rem 5rem 0;
+            padding: 0 5rem 3rem 0;
             color: var(--french-gray);
             cursor: default;
-
+            text-align: start;
         }
 
         .hero img {
             max-width: 600px;
-            width: 80%;
+            width: 40%;
             margin-bottom: 2rem;
+        }
+
+        .left {
+            width: 60%;
         }
 
         .btn-primary {
@@ -119,6 +121,7 @@
         .btn-primara {
             background-color: var(--light-accent-color);
             color: var(--main-color);
+            width: 100%;
             padding: 1.5rem 4rem;
             border-radius: 20px;
             font-size: clamp(1rem, 5vw, 1.5rem);
@@ -230,18 +233,68 @@
             color: var(--mid-main-secondary);
         }
 
-        h3{
+        h3 {
             margin: 0;
         }
 
-        @media (min-width: 768px) {
+        @media (max-width: 768px) {
+            header {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: center;
+                padding: 1rem 10rem;
+                width: 100%;
+                backdrop-filter: blur(10px);
+                flex-wrap: wrap;
+                position: fixed;
+                top: 0;
+                z-index: 1000;
+                background-color: #2b2d42c9;
+            }
+
+            .logo{
+                color: white;
+            }
+
+            .navbarLink{
+                display: none;
+            }
+
             .hero {
-                flex-direction: row;
+                flex-direction: column-reverse;
                 text-align: left;
+                margin: 0;
+                padding: 1rem;
+                background: linear-gradient(0deg, var(--raisin-black) 15%, var(--main-color) 100%);
+                padding-top: 10rem;
             }
 
             .hero img {
-                margin: 0 2rem;
+                width: 60%;
+            }
+
+            .hero h1 {
+                text-align: center;
+            }
+
+            .hero p {
+                text-align: center;
+                padding: 1rem;
+            }
+
+            .left {
+                width: 100%;
+            }
+
+            .btn-primary {
+               display: none;
+            }
+
+            .btn-primara {
+                background-color: var(--light-accent-color);
+                color: var(--main-color);
+                padding: 1.5rem 4rem;
             }
         }
     </style>
@@ -252,16 +305,16 @@
     <header>
         <a href="index.html" class="logo">equathora</a>
         <nav>
-            <a href="#features">Features</a>
-            <a href="#trust">Trusted by</a>
-            <a class="btn-primary"
+            <a href="#features" class="navbarLink">Features</a>
+            <a href="#trust" class="navbarLink">Trusted by</a>
+            <a class="btn-primary" class="navbarLink"
                 href="https://docs.google.com/forms/d/e/1FAIpQLSdLLApMvE_dJdllHd0U4YxFFQ6K7YasS4I-xO1mDG9SFCariw/viewform"
-                target="_blank">Join Waitlist</a>
+                target="_blank" class="navbarLink">Join Waitlist</a>
         </nav>
     </header>
 
     <section class="hero">
-        <div>
+        <div class="left">
             <h1>Turn Logic into your superpower</h1>
             <p>Join Equathora, a platform for high-level math and logic problems. Solve challenges, earn achievements,
                 climb
@@ -388,9 +441,10 @@
         <div style="display:flex; flex-wrap:wrap; justify-content:center; gap:3rem; margin-top:2rem;">
 
             <div
-                style="max-width:400px;height: 600px; display: flex; flex-direction: column;justify-content: space-evenly; align-items: center; border: 2px solid var(--main-color); border-radius: 20px; padding: 2rem;">
+                style="background-color:var(--main-color);max-width:400px;height: 600px; display: flex; flex-direction: column;justify-content: space-evenly; align-items: center; border: 2px solid var(--main-color); border-radius: 20px; padding: 2rem;">
                 <img src="./images/learningBooks.svg" alt="Step 1" style="height: 20%; margin-bottom:1rem;">
-                <h3 style="color:var(--accent-color); font-size:3rem; margin: 0; font-family: 'DynaPuff', cursive; font-weight: 400;">
+                <h3
+                    style="color:var(--accent-color); font-size:3rem; margin: 0; font-family: 'DynaPuff', cursive; font-weight: 400;">
                     Learn
                 </h3>
                 <p style="font-size: clamp(1.1rem, 3vw, 1.4rem); color: var(--secondary-color);">
@@ -400,9 +454,10 @@
 
 
             <div
-                style="max-width:400px;height: 600px;  padding: 2rem;display: flex; flex-direction: column;justify-content: space-evenly; align-items: center; border: 2px solid var(--main-color); border-radius: 20px;">
+                style="background-color:var(--main-color);max-width:400px;height: 600px;  padding: 2rem;display: flex; flex-direction: column;justify-content: space-evenly; align-items: center; border: 2px solid var(--main-color); border-radius: 20px;">
                 <img src="./images/studying.svg" alt="Step 2" style="height: 20%; margin-bottom:1rem;">
-                <h3 style="color:var(--accent-color); font-size:3rem; margin: 0; font-family: 'DynaPuff', cursive; font-weight: 400;">
+                <h3
+                    style="color:var(--accent-color); font-size:3rem; margin: 0; font-family: 'DynaPuff', cursive; font-weight: 400;">
                     Practice
                 </h3>
                 <p style="font-size: clamp(1.1rem, 3vw, 1.4rem); color: var(--secondary-color);">
@@ -412,9 +467,10 @@
 
 
             <div
-                style="max-width:400px; height: 600px;  padding: 2rem;display: flex; flex-direction: column;justify-content: space-evenly; align-items: center;border: 2px solid var(--main-color); border-radius: 20px;">
+                style="background-color:var(--main-color);max-width:400px; height: 600px;  padding: 2rem;display: flex; flex-direction: column;justify-content: space-evenly; align-items: center;border: 2px solid var(--main-color); border-radius: 20px;">
                 <img src="./images/achievementsDD.svg" alt="Step 3" style="height: 20%;margin-bottom:1rem;">
-                <h3 style="color:var(--accent-color); font-size:3rem; margin: 0; font-family: 'DynaPuff', cursive; font-weight: 400;">
+                <h3
+                    style="color:var(--accent-color); font-size:3rem; margin: 0; font-family: 'DynaPuff', cursive; font-weight: 400;">
                     Achieve
 
                 </h3>
@@ -428,10 +484,12 @@
     <section
         style="padding:2rem 2rem; text-align:center; background-color:var(--secondary-color); border-radius:12px; margin:2rem; height: auto; display: flex; flex-direction: column; justify-content: space-around;">
 
-        <h2>Start Your Journey Today</h2>
+        <h2 style="margin: 0; font-size: clamp(1.5rem, 4vw, 2rem); font-weight: 600;">Start Your Journey Today</h2>
 
-        <p style="color: goldenrod; font-size: clamp(1.2rem, 3vw, 1.5rem);">Mentor spots are limited and early access <br>
-            gives you bonus achievements. Don't miss out!</p>
+        <p style="color: goldenrod; font-size: clamp(1.2rem, 3vw, 1.5rem); margin: 0.7rem 0rem 3rem 0;">Mentor spots are limited and early access
+            <br>
+            gives you bonus achievements. Don't miss out!
+        </p>
 
         <a class="btn-primary"
             href="https://docs.google.com/forms/d/e/1FAIpQLSdLLApMvE_dJdllHd0U4YxFFQ6K7YasS4I-xO1mDG9SFCariw/viewform"
