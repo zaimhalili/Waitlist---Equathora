@@ -22,6 +22,87 @@ body {
     background: linear-gradient(180deg, var(--raisin-black) 20%, var(--main-color));
     color: var(--main-color);
     line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* Fade-in animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        box-shadow: 0 0 0 0 rgba(239, 35, 60, 0.7);
+    }
+
+    50% {
+        box-shadow: 0 0 0 15px rgba(239, 35, 60, 0);
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.animate-on-scroll {
+    opacity: 0;
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.animate-on-scroll.visible {
+    animation: fadeInUp 0.8s ease-out forwards;
 }
 
 a {
@@ -41,6 +122,8 @@ header {
     top: 0;
     z-index: 1000;
     background-color: #2b2d42c9;
+    transition: all 0.3s ease;
+    animation: fadeIn 0.8s ease-out;
 }
 
 .logo {
@@ -48,6 +131,11 @@ header {
     font-weight: 600;
     font-size: 2rem;
     color: var(--main-color);
+    transition: transform 0.3s ease;
+}
+
+.logo:hover {
+    transform: scale(1.05);
 }
 
 nav a {
@@ -55,11 +143,29 @@ nav a {
     font-weight: 600;
     font-size: 1.2rem;
     color: var(--main-color);
-    transition: color 0.3s;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+nav a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px;
+    left: 50%;
+    background-color: var(--light-accent-color);
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
 }
 
 nav a:hover {
     color: var(--light-accent-color);
+    transform: translateY(-2px);
+}
+
+nav a:hover::after {
+    width: 100%;
 }
 
 .hero {
@@ -81,6 +187,7 @@ nav a:hover {
     line-height: 1.1;
     cursor: default;
     text-align: start;
+    animation: slideInLeft 1s ease-out;
 }
 
 .hero p {
@@ -89,12 +196,14 @@ nav a:hover {
     color: var(--french-gray);
     cursor: default;
     text-align: start;
+    animation: slideInLeft 1.2s ease-out;
 }
 
 .hero img {
     max-width: 600px;
     width: 40%;
     margin-bottom: 2rem;
+    animation: float 3s ease-in-out infinite, slideInRight 1s ease-out;
 }
 
 .left {
@@ -110,7 +219,27 @@ nav a:hover {
     padding: 0.8rem 2rem;
     border-radius: 8px;
     font-weight: 600;
-    transition: background-color 0.3s, transform 0.2s;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-primary::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.2);
+    transform: translate(-50%, -50%);
+    transition: width 0.6s, height 0.6s;
+}
+
+.btn-primary:hover::before {
+    width: 300px;
+    height: 300px;
 }
 
 .btn-primara {
@@ -121,7 +250,28 @@ nav a:hover {
     border-radius: 20px;
     font-size: clamp(1rem, 5vw, 1.5rem);
     font-weight: 600;
-    transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
+    transition: all 0.3s ease;
+    animation: slideInLeft 1.4s ease-out, pulse 2s infinite;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-primara::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.2);
+    transform: translate(-50%, -50%);
+    transition: width 0.6s, height 0.6s;
+}
+
+.btn-primara:hover::before {
+    width: 400px;
+    height: 400px;
 }
 
 .btn-primari {
@@ -132,7 +282,27 @@ nav a:hover {
     border-radius: 20px;
     font-size: clamp(1rem, 5vw, 1.5rem);
     font-weight: 600;
-    transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-primari::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.2);
+    transform: translate(-50%, -50%);
+    transition: width 0.6s, height 0.6s;
+}
+
+.btn-primari:hover::before {
+    width: 400px;
+    height: 400px;
 }
 
 .btn-primari:hover,
@@ -140,7 +310,8 @@ nav a:hover {
 .btn-primara:hover {
     color: white;
     background-color: var(--dark-accent-color);
-    transform: translateY(-2px);
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 10px 25px rgba(217, 4, 41, 0.4);
 }
 
 section {
@@ -171,7 +342,7 @@ section {
     border-radius: 16px;
     min-width: 300px;
     text-align: left;
-    transition: transform 0.3s, box-shadow 0.3s;
+    transition: all 0.4s ease;
     box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
     display: flex;
     justify-content: space-between;
@@ -183,10 +354,16 @@ section {
 
 .feature-card:hover {
     box-shadow: 0 12px 24px rgba(0, 0, 0, 0.45);
+    transform: translateY(-10px) scale(1.02);
 }
 
 .feature-card img {
     width: 180px;
+    transition: transform 0.4s ease;
+}
+
+.feature-card:hover img {
+    transform: scale(1.1) rotate(5deg);
 }
 
 .feature-card h3 {
@@ -228,6 +405,23 @@ section {
     align-items: center;
     text-align: center;
     font-size: clamp(1.1rem, 3vw, 1.2rem);
+    transition: all 0.3s ease;
+}
+
+.std-review:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4) !important;
+}
+
+/* Stats counter animation */
+.stat-number {
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+.stat-number:hover {
+    transform: scale(1.15);
+    color: var(--accent-color);
 }
 
 footer {
@@ -240,6 +434,58 @@ footer {
 
 h3 {
     margin: 0;
+}
+
+/* How It Works cards hover effect */
+section>div>div[style*="background-color:var(--main-color)"] {
+    transition: all 0.4s ease;
+}
+
+section>div>div[style*="background-color:var(--main-color)"]:hover {
+    transform: translateY(-10px) scale(1.03);
+    box-shadow: 0 15px 40px rgba(217, 4, 41, 0.3);
+}
+
+section>div>div[style*="background-color:var(--main-color)"] img {
+    transition: transform 0.4s ease;
+}
+
+section>div>div[style*="background-color:var(--main-color)"]:hover img {
+    transform: scale(1.1);
+}
+
+/* Final CTA section pulse animation */
+section[style*="background-color:var(--secondary-color)"] {
+    transition: all 0.3s ease;
+}
+
+section[style*="background-color:var(--secondary-color)"]:hover {
+    transform: scale(1.01);
+}
+
+/* Footer link hover */
+footer a {
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+footer a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 1px;
+    bottom: -2px;
+    left: 0;
+    background-color: var(--light-accent-color);
+    transition: width 0.3s ease;
+}
+
+footer a:hover {
+    color: var(--light-accent-color);
+}
+
+footer a:hover::after {
+    width: 100%;
 }
 
 @media (max-width: 888px) {
@@ -268,15 +514,18 @@ h3 {
 
     .hero img {
         width: 60%;
+        animation: float 3s ease-in-out infinite, fadeIn 1s ease-out;
     }
 
     .hero h1 {
         text-align: center;
+        animation: fadeInUp 1s ease-out;
     }
 
     .hero p {
         text-align: center;
         padding: 1rem;
+        animation: fadeInUp 1.2s ease-out;
     }
 
     .left {
@@ -296,5 +545,11 @@ h3 {
         width: 100%;
         text-align: center;
         padding: 1rem 2rem;
+        animation: fadeInUp 1.4s ease-out, pulse 2s infinite;
+    }
+
+    /* Reduce parallax on mobile */
+    .hero img {
+        transform: none !important;
     }
 }

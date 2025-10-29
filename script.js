@@ -19,7 +19,7 @@ document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Optional: Add scroll effect to header
+// Add scroll effect to header
 let lastScroll = 0;
 const header = document.querySelector('header');
 
@@ -35,7 +35,49 @@ window.addEventListener('scroll', () => {
     lastScroll = currentScroll;
 });
 
-// Optional: Analytics tracking for waitlist clicks
+// Scroll animations for elements
+const observerOptions = {
+    threshold: 0.1,
+    rootMargin: '0px 0px -50px 0px'
+};
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+
+            // Trigger counter animation for stat numbers
+            if (entry.target.querySelector('.stat-number')) {
+                animateCounter(entry.target.querySelector('.stat-number'));
+            }
+        }
+    });
+}, observerOptions);
+
+// Observe all elements with animate-on-scroll class
+document.querySelectorAll('.animate-on-scroll').forEach(el => {
+    observer.observe(el);
+});
+
+// Counter animation function
+function animateCounter(element) {
+    const target = parseInt(element.getAttribute('data-target'));
+    const duration = 2000; // 2 seconds
+    const increment = target / (duration / 16); // 60fps
+    let current = 0;
+
+    const timer = setInterval(() => {
+        current += increment;
+        if (current >= target) {
+            element.textContent = target + '+';
+            clearInterval(timer);
+        } else {
+            element.textContent = Math.floor(current) + '+';
+        }
+    }, 16);
+}
+
+// Analytics tracking for waitlist clicks
 const trackWaitlistClick = (source) => {
     console.log(`Waitlist button clicked from: ${source}`);
     // Add your analytics tracking code here (Google Analytics, etc.)
@@ -47,4 +89,16 @@ document.querySelectorAll('a[href*="forms.gle"], a[href*="google.com/forms"]').f
         const buttonText = button.textContent.trim();
         trackWaitlistClick(buttonText);
     });
+});
+
+// Add subtle parallax effect to hero section
+window.addEventListener('scroll', () => {
+    const scrolled = window.pageYOffset;
+    const hero = document.querySelector('.hero');
+    if (hero) {
+        const heroImg = hero.querySelector('img');
+        if (heroImg && scrolled < window.innerHeight) {
+            heroImg.style.transform = `translateY(${scrolled * 0.3}px)`;
+        }
+    }
 });
