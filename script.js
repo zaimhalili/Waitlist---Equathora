@@ -9,9 +9,9 @@ document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
         e.preventDefault();
         const targetId = this.getAttribute('href');
         const targetElement = document.querySelector(targetId);
-        
+
         if (targetElement) {
-            targetElement.scrollIntoView({ 
+            targetElement.scrollIntoView({
                 behavior: 'smooth',
                 block: 'start'
             });
@@ -25,13 +25,13 @@ const header = document.querySelector('header');
 
 window.addEventListener('scroll', () => {
     const currentScroll = window.pageYOffset;
-    
+
     if (currentScroll <= 0) {
         header.style.boxShadow = 'none';
     } else {
         header.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.1)';
     }
-    
+
     lastScroll = currentScroll;
 });
 
