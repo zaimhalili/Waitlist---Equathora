@@ -8,6 +8,7 @@
     <meta name="description"
         content="Join Equathora - Turn Logic into your superpower. Master advanced mathematics and logic through interactive challenges, expert mentorship, and gamified learning.">
     <meta name="keywords" content="mathematics, logic, problem-solving, learning platform, online education, STEM">
+    <meta name="theme-color" content="#2b2d42">
     <title>Equathora - Turn Logic into Your Superpower</title>
 
     <!-- External CSS -->
@@ -15,223 +16,599 @@
 </head>
 
 <body>
+    <!-- Progress bar at top -->
+    <div class="scroll-progress"></div>
+
     <header>
-        <a href="index.html" class="logo"><img src="./images/logo/TransparentSymbol.png" alt="" style="width: 50px;"></a>
+        <a href="index.html" class="logo">
+            <img src="./images/logo/TransparentSymbol.png" alt="Equathora Logo">
+            <span class="logo-text">Equathora</span>
+        </a>
         <nav>
             <a href="#features" class="navbarLink">Features</a>
-            <a href="#trust" class="navbarLink">Trusted by</a>
-            <a class="btn-primary" class="navbarLink"
+            <a href="#trust" class="navbarLink">Reviews</a>
+            <a href="#how-it-works" class="navbarLink">How It Works</a>
+            <a class="btn-primary navbarLink"
                 href="https://docs.google.com/forms/d/e/1FAIpQLSdLLApMvE_dJdllHd0U4YxFFQ6K7YasS4I-xO1mDG9SFCariw/viewform"
-                target="_blank" class="navbarLink">Join Waitlist</a>
+                target="_blank" rel="noopener noreferrer">
+                <span>Join Waitlist</span>
+                <svg class="arrow-icon" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                    <path d="M1 8H15M15 8L8 1M15 8L8 15" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                </svg>
+            </a>
         </nav>
+        <button class="mobile-menu-toggle" aria-label="Toggle menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
     </header>
 
+
     <section class="hero">
-        <div class="left">
-            <h1>Turn Logic into your superpower</h1>
-            <p>Join Equathora, a platform for high-level math and logic problems. Solve challenges, earn achievements,
-                climb
-                leaderboards, and get mentorship as you grow. <br>
-                Trusted by over <span style="color: white;"><strong>1000 students</strong></span> worldwide.</p>
-            <a class="btn-primara"
-                href="https://docs.google.com/forms/d/e/1FAIpQLSdLLApMvE_dJdllHd0U4YxFFQ6K7YasS4I-xO1mDG9SFCariw/viewform"
-                target="_blank" rel="nofollow noopener">Get Started</a>
+        <div class="hero-content">
+            <div class="hero-badge">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <path d="M10 2L12.5 7.5L18 8.5L14 13L15 18.5L10 15.5L5 18.5L6 13L2 8.5L7.5 7.5L10 2Z"
+                        fill="currentColor" />
+                </svg>
+                <span>Trusted by 1000+ students worldwide</span>
+            </div>
+
+            <h1>Turn Logic into Your <span class="gradient-text">Superpower</span></h1>
+
+            <p class="hero-description">
+                Master advanced mathematics and logic through interactive challenges, expert mentorship, and gamified
+                learning.
+                Join a community that's redefining how students excel in STEM.
+            </p>
+
+            <div class="hero-stats-inline">
+                <div class="stat-inline">
+                    <strong>500+</strong>
+                    <span>Active Students</span>
+                </div>
+                <div class="stat-inline">
+                    <strong>50+</strong>
+                    <span>Expert Problems</span>
+                </div>
+                <div class="stat-inline">
+                    <strong>30+</strong>
+                    <span>Live Mentors</span>
+                </div>
+            </div>
+
+            <div class="hero-cta">
+                <a class="btn-hero"
+                    href="https://docs.google.com/forms/d/e/1FAIpQLSdLLApMvE_dJdllHd0U4YxFFQ6K7YasS4I-xO1mDG9SFCariw/viewform"
+                    target="_blank" rel="noopener noreferrer">
+                    Get Early Access
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <path d="M4 10H16M16 10L10 4M16 10L10 16" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </a>
+                <p class="cta-note">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+                        <path
+                            d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2z" />
+                    </svg>
+                    Limited spots available — Bonus achievements for early members
+                </p>
+            </div>
         </div>
-        <img src="./images/studying.svg" alt="Equathora Illustration">
+
+        <div class="hero-visual">
+            <div class="floating-card card-1">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <path
+                        d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"
+                        fill="#ef233c" stroke="#ef233c" stroke-width="2" />
+                </svg>
+                <span>Achievement Unlocked!</span>
+            </div>
+            <div class="floating-card card-2">
+                <div class="progress-ring">
+                    <svg width="40" height="40">
+                        <circle cx="20" cy="20" r="18" fill="none" stroke="#edf2f4" stroke-width="4" opacity="0.3" />
+                        <circle cx="20" cy="20" r="18" fill="none" stroke="#ef233c" stroke-width="4"
+                            stroke-dasharray="113" stroke-dashoffset="28" transform="rotate(-90 20 20)" />
+                    </svg>
+                </div>
+                <div>
+                    <div class="card-label">Progress</div>
+                    <div class="card-value">75%</div>
+                </div>
+            </div>
+            <div class="floating-card card-3">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <path
+                        d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM10 17L5 12L6.41 10.59L10 14.17L17.59 6.58L19 8L10 17Z"
+                        fill="#4ade80" />
+                </svg>
+                <span>Problem Solved</span>
+            </div>
+            <img src="./images/studying.svg" alt="Student learning illustration" class="hero-image">
+        </div>
     </section>
 
+
     <section id="features">
-        <h2 class="animate-on-scroll">Features That Level Up Your Learning</h2>
+        <div class="section-header">
+            <h2 class="animate-on-scroll">Features That Level Up Your Learning</h2>
+            <p class="section-subtitle animate-on-scroll">Everything you need to master advanced mathematics and logic
+            </p>
+        </div>
+
         <div class="features">
             <div class="feature-card animate-on-scroll">
-                <img src="./images/achievementsDD.svg" alt="Topic-Based Challenges Icon">
-                <div>
+                <div class="feature-icon">
+                    <img src="./images/achievementsDD.svg" alt="Topic-Based Challenges">
+                </div>
+                <div class="feature-content">
                     <h3>Topic-Based Challenges</h3>
-                    <p>Master math and logic with Equatora. Start from foundations and progress to advanced challenges
-                        step by step. Get
-                        instant <strong>feedback</strong>, earn <strong>points</strong>, and <strong>track your
-                            mastery</strong> across every topic.</p>
+                    <p>Progress from foundations to advanced challenges step by step. Get instant
+                        <strong>feedback</strong>, earn <strong>points</strong>, and <strong>track your mastery</strong>
+                        across every topic.</p>
+                    <ul class="feature-list">
+                        <li>
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                <path
+                                    d="M7 10L9 12L13 8M19 10C19 14.9706 14.9706 19 10 19C5.02944 19 1 14.9706 1 10C1 5.02944 5.02944 1 10 1C14.9706 1 19 5.02944 19 10Z"
+                                    stroke="#ef233c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                            Structured learning paths
+                        </li>
+                        <li>
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                <path
+                                    d="M7 10L9 12L13 8M19 10C19 14.9706 14.9706 19 10 19C5.02944 19 1 14.9706 1 10C1 5.02944 5.02944 1 10 1C14.9706 1 19 5.02944 19 10Z"
+                                    stroke="#ef233c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                            Real-time feedback
+                        </li>
+                        <li>
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                <path
+                                    d="M7 10L9 12L13 8M19 10C19 14.9706 14.9706 19 10 19C5.02944 19 1 14.9706 1 10C1 5.02944 5.02944 1 10 1C14.9706 1 19 5.02944 19 10Z"
+                                    stroke="#ef233c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                            Progress tracking
+                        </li>
+                    </ul>
                 </div>
-
-                <a class="btn-primary"
+                <a class="btn-secondary"
                     href="https://docs.google.com/forms/d/e/1FAIpQLSdLLApMvE_dJdllHd0U4YxFFQ6K7YasS4I-xO1mDG9SFCariw/viewform"
-                    target="_blank" rel="nofollow noopener">Be the first user for free</a>
+                    target="_blank" rel="noopener noreferrer">
+                    Join for Free
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                        <path d="M3 8H13M13 8L8 3M13 8L8 13" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </a>
             </div>
 
             <div class="feature-card animate-on-scroll">
-                <img src="./images/mentoring.svg" alt="Mentor Guidance Icon">
-                <div>
-                    <h3>Mentor Guidance</h3>
-                    <p>Get guidance from experienced mentors. Stuck on a problem or checking solutions? <strong>Mentors
-                            explain</strong>
-                        strategies and
-                        shortcuts step by step. <strong>Choose quick hints</strong> or deep reviews, and pick up insider
-                        tips to solve
-                        problems like a pro.
-                    </p>
+                <div class="feature-icon">
+                    <img src="./images/mentoring.svg" alt="Mentor Guidance">
                 </div>
-
-                <a class="btn-primary"
+                <div class="feature-content">
+                    <h3>Expert Mentor Guidance</h3>
+                    <p>Get personalized help from experienced mentors. <strong>Choose quick hints</strong> or deep
+                        reviews, and learn insider strategies to solve problems like a pro.</p>
+                    <ul class="feature-list">
+                        <li>
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                <path
+                                    d="M7 10L9 12L13 8M19 10C19 14.9706 14.9706 19 10 19C5.02944 19 1 14.9706 1 10C1 5.02944 5.02944 1 10 1C14.9706 1 19 5.02944 19 10Z"
+                                    stroke="#ef233c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                            1-on-1 mentorship
+                        </li>
+                        <li>
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                <path
+                                    d="M7 10L9 12L13 8M19 10C19 14.9706 14.9706 19 10 19C5.02944 19 1 14.9706 1 10C1 5.02944 5.02944 1 10 1C14.9706 1 19 5.02944 19 10Z"
+                                    stroke="#ef233c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                            Step-by-step explanations
+                        </li>
+                        <li>
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                <path
+                                    d="M7 10L9 12L13 8M19 10C19 14.9706 14.9706 19 10 19C5.02944 19 1 14.9706 1 10C1 5.02944 5.02944 1 10 1C14.9706 1 19 5.02944 19 10Z"
+                                    stroke="#ef233c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                            Problem-solving strategies
+                        </li>
+                    </ul>
+                </div>
+                <a class="btn-secondary"
                     href="https://docs.google.com/forms/d/e/1FAIpQLSdLLApMvE_dJdllHd0U4YxFFQ6K7YasS4I-xO1mDG9SFCariw/viewform"
-                    target="_blank" rel="nofollow noopener">Sign up early</a>
+                    target="_blank" rel="noopener noreferrer">
+                    Get Started
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                        <path d="M3 8H13M13 8L8 3M13 8L8 13" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </a>
             </div>
 
             <div class="feature-card animate-on-scroll">
-                <img src="./images/leaderboards.svg" alt="Achievements & Gamification Icon">
-                <div>
+                <div class="feature-icon">
+                    <img src="./images/leaderboards.svg" alt="Achievements & Gamification">
+                </div>
+                <div class="feature-content">
                     <h3>Achievements & Gamification</h3>
-                    <p>Stay <strong>motivated</strong> with gamified learning. Earn points, unlock badges, and climb
-                        leaderboards as you
-                        progress. Track your
-                        growth, <strong>face challenges</strong> that match your level, and collect achievements to
-                        showcase your skills.
-                    </p>
+                    <p>Stay <strong>motivated</strong> with points, badges, and leaderboards. Track your growth and
+                        showcase your skills with exclusive achievements.</p>
+                    <ul class="feature-list">
+                        <li>
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                <path
+                                    d="M7 10L9 12L13 8M19 10C19 14.9706 14.9706 19 10 19C5.02944 19 1 14.9706 1 10C1 5.02944 5.02944 1 10 1C14.9706 1 19 5.02944 19 10Z"
+                                    stroke="#ef233c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                            Unlock rare badges
+                        </li>
+                        <li>
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                <path
+                                    d="M7 10L9 12L13 8M19 10C19 14.9706 14.9706 19 10 19C5.02944 19 1 14.9706 1 10C1 5.02944 5.02944 1 10 1C14.9706 1 19 5.02944 19 10Z"
+                                    stroke="#ef233c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                            Climb leaderboards
+                        </li>
+                        <li>
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                <path
+                                    d="M7 10L9 12L13 8M19 10C19 14.9706 14.9706 19 10 19C5.02944 19 1 14.9706 1 10C1 5.02944 5.02944 1 10 1C14.9706 1 19 5.02944 19 10Z"
+                                    stroke="#ef233c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                            Earn rewards
+                        </li>
+                    </ul>
                 </div>
-
-                <a class="btn-primary"
+                <a class="btn-secondary"
                     href="https://docs.google.com/forms/d/e/1FAIpQLSdLLApMvE_dJdllHd0U4YxFFQ6K7YasS4I-xO1mDG9SFCariw/viewform"
-                    target="_blank" rel="nofollow noopener">Sign up early to earn rare achievements</a>
+                    target="_blank" rel="noopener noreferrer">
+                    Claim Bonus
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                        <path d="M3 8H13M13 8L8 3M13 8L8 13" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </a>
             </div>
 
             <div class="feature-card animate-on-scroll">
-                <img src="./images/teacher.svg" alt="Interactive Online Solving Icon">
-                <div>
-                    <h3>Interactive Online Solving</h3>
-                    <p>Practice smarter in your browser. Solve problems with our editor and get instant feedback, hints,
-                        and solutions.
-                        Learn
-                        actively, <strong>retain concepts faster</strong>, and enjoy <strong>game-like
-                            challenges</strong> with levels, achievements, and
-                        rewards.</p>
+                <div class="feature-icon">
+                    <img src="./images/teacher.svg" alt="Interactive Online Solving">
                 </div>
-
-                <a class="btn-primary"
+                <div class="feature-content">
+                    <h3>Interactive Online Solving</h3>
+                    <p>Practice smarter in your browser. Get instant feedback, hints, and solutions. <strong>Retain
+                            concepts faster</strong> with game-like challenges and rewards.</p>
+                    <ul class="feature-list">
+                        <li>
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                <path
+                                    d="M7 10L9 12L13 8M19 10C19 14.9706 14.9706 19 10 19C5.02944 19 1 14.9706 1 10C1 5.02944 5.02944 1 10 1C14.9706 1 19 5.02944 19 10Z"
+                                    stroke="#ef233c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                            Browser-based editor
+                        </li>
+                        <li>
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                <path
+                                    d="M7 10L9 12L13 8M19 10C19 14.9706 14.9706 19 10 19C5.02944 19 1 14.9706 1 10C1 5.02944 5.02944 1 10 1C14.9706 1 19 5.02944 19 10Z"
+                                    stroke="#ef233c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                            Instant validation
+                        </li>
+                        <li>
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                <path
+                                    d="M7 10L9 12L13 8M19 10C19 14.9706 14.9706 19 10 19C5.02944 19 1 14.9706 1 10C1 5.02944 5.02944 1 10 1C14.9706 1 19 5.02944 19 10Z"
+                                    stroke="#ef233c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                            Detailed solutions
+                        </li>
+                    </ul>
+                </div>
+                <a class="btn-secondary"
                     href="https://docs.google.com/forms/d/e/1FAIpQLSdLLApMvE_dJdllHd0U4YxFFQ6K7YasS4I-xO1mDG9SFCariw/viewform"
-                    target="_blank" rel="nofollow noopener">Be the first one to experience</a>
+                    target="_blank" rel="noopener noreferrer">
+                    Try It First
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                        <path d="M3 8H13M13 8L8 3M13 8L8 13" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </a>
             </div>
         </div>
     </section>
 
     <section id="trust" class="trust">
-        <h2 class="animate-on-scroll">Trusted by Learners Worldwide</h2>
-        <p class="animate-on-scroll">Join a growing community of over <strong>1000 students</strong> mastering advanced
-            problem-solving skills
-            with
-            Equathora.</p>
+        <div class="section-header">
+            <h2 class="animate-on-scroll">Loved by Students Worldwide</h2>
+            <p class="section-subtitle animate-on-scroll">Join 1000+ students mastering advanced problem-solving with
+                Equathora</p>
+        </div>
 
-        <!-- Social proof / testimonials -->
-        <div class="testimonials"
-            style="display:flex; flex-wrap:wrap; justify-content:center; gap:2rem; margin-top:2rem;">
-            <div class="std-review animate-on-scroll"
-                style="background-color:var(--secondary-color); padding:1.5rem; border-radius:12px; flex-grow: 1; max-width:500px; text-align:left; box-shadow:0 4px 10px rgba(0,0,0,0.3);">
-                <p>"Equathora made learning advanced math fun and interactive. I leveled up my problem-solving skills in
-                    just weeks!"</p>
-                <strong>- Sofia Masini</strong>
+        <div class="testimonials">
+            <div class="testimonial-card animate-on-scroll">
+                <div class="testimonial-rating">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="#fbbf24">
+                        <path d="M10 2L12.5 7.5L18 8.5L14 13L15 18.5L10 15.5L5 18.5L6 13L2 8.5L7.5 7.5L10 2Z" />
+                    </svg>
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="#fbbf24">
+                        <path d="M10 2L12.5 7.5L18 8.5L14 13L15 18.5L10 15.5L5 18.5L6 13L2 8.5L7.5 7.5L10 2Z" />
+                    </svg>
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="#fbbf24">
+                        <path d="M10 2L12.5 7.5L18 8.5L14 13L15 18.5L10 15.5L5 18.5L6 13L2 8.5L7.5 7.5L10 2Z" />
+                    </svg>
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="#fbbf24">
+                        <path d="M10 2L12.5 7.5L18 8.5L14 13L15 18.5L10 15.5L5 18.5L6 13L2 8.5L7.5 7.5L10 2Z" />
+                    </svg>
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="#fbbf24">
+                        <path d="M10 2L12.5 7.5L18 8.5L14 13L15 18.5L10 15.5L5 18.5L6 13L2 8.5L7.5 7.5L10 2Z" />
+                    </svg>
+                </div>
+                <p class="testimonial-text">"Equathora made learning advanced math fun and interactive. I leveled up my
+                    problem-solving skills in just weeks!"</p>
+                <div class="testimonial-author">
+                    <div class="author-avatar">SM</div>
+                    <div>
+                        <strong>Sofia Masini</strong>
+                        <span>Mathematics Student</span>
+                    </div>
+                </div>
             </div>
-            <div class="std-review animate-on-scroll"
-                style="background-color:var(--secondary-color); padding:1.5rem; border-radius:12px;flex-grow: 1; max-width:500px;  text-align:left; box-shadow:0 4px 10px rgba(0,0,0,0.3);">
-                <p>"The mentors are fantastic. I get instant guidance and hints that really help me understand tough
-                    problems."</p>
-                <strong>- Kael Thorne</strong>
+
+            <div class="testimonial-card animate-on-scroll">
+                <div class="testimonial-rating">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="#fbbf24">
+                        <path d="M10 2L12.5 7.5L18 8.5L14 13L15 18.5L10 15.5L5 18.5L6 13L2 8.5L7.5 7.5L10 2Z" />
+                    </svg>
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="#fbbf24">
+                        <path d="M10 2L12.5 7.5L18 8.5L14 13L15 18.5L10 15.5L5 18.5L6 13L2 8.5L7.5 7.5L10 2Z" />
+                    </svg>
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="#fbbf24">
+                        <path d="M10 2L12.5 7.5L18 8.5L14 13L15 18.5L10 15.5L5 18.5L6 13L2 8.5L7.5 7.5L10 2Z" />
+                    </svg>
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="#fbbf24">
+                        <path d="M10 2L12.5 7.5L18 8.5L14 13L15 18.5L10 15.5L5 18.5L6 13L2 8.5L7.5 7.5L10 2Z" />
+                    </svg>
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="#fbbf24">
+                        <path d="M10 2L12.5 7.5L18 8.5L14 13L15 18.5L10 15.5L5 18.5L6 13L2 8.5L7.5 7.5L10 2Z" />
+                    </svg>
+                </div>
+                <p class="testimonial-text">"The mentors are fantastic. I get instant guidance and hints that really
+                    help me understand tough problems."</p>
+                <div class="testimonial-author">
+                    <div class="author-avatar">KT</div>
+                    <div>
+                        <strong>Kael Thorne</strong>
+                        <span>Logic Enthusiast</span>
+                    </div>
+                </div>
             </div>
-            <div class="std-review animate-on-scroll"
-                style="background-color:var(--secondary-color); padding:1.5rem; border-radius:12px; flex-grow: 1; max-width:500px;  text-align:left; box-shadow:0 4px 10px rgba(0,0,0,0.3);">
-                <p>"The achievements and badges make learning addictive. I feel rewarded every time I complete a
-                    challenge."
-                </p>
-                <strong>- Marco Barozzi</strong>
+
+            <div class="testimonial-card animate-on-scroll">
+                <div class="testimonial-rating">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="#fbbf24">
+                        <path d="M10 2L12.5 7.5L18 8.5L14 13L15 18.5L10 15.5L5 18.5L6 13L2 8.5L7.5 7.5L10 2Z" />
+                    </svg>
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="#fbbf24">
+                        <path d="M10 2L12.5 7.5L18 8.5L14 13L15 18.5L10 15.5L5 18.5L6 13L2 8.5L7.5 7.5L10 2Z" />
+                    </svg>
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="#fbbf24">
+                        <path d="M10 2L12.5 7.5L18 8.5L14 13L15 18.5L10 15.5L5 18.5L6 13L2 8.5L7.5 7.5L10 2Z" />
+                    </svg>
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="#fbbf24">
+                        <path d="M10 2L12.5 7.5L18 8.5L14 13L15 18.5L10 15.5L5 18.5L6 13L2 8.5L7.5 7.5L10 2Z" />
+                    </svg>
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="#fbbf24">
+                        <path d="M10 2L12.5 7.5L18 8.5L14 13L15 18.5L10 15.5L5 18.5L6 13L2 8.5L7.5 7.5L10 2Z" />
+                    </svg>
+                </div>
+                <p class="testimonial-text">"The achievements and badges make learning addictive. I feel rewarded every
+                    time I complete a challenge."</p>
+                <div class="testimonial-author">
+                    <div class="author-avatar">MB</div>
+                    <div>
+                        <strong>Marco Barozzi</strong>
+                        <span>STEM Student</span>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Stats / counters -->
-    <section style="padding:4rem 2rem; text-align:center; background-color:transparent;">
-        <h2 class="animate-on-scroll" style="font-size: clamp(1.5rem, 5vw, 3rem);">Numbers That Speak</h2>
-        <div
-            style="display:flex; justify-content:center; gap:3rem; flex-wrap:wrap; margin-top:2rem; text-align: center;">
-            <div class="animate-on-scroll" style="width: 300px;">
-                <h3 class="stat-number" data-target="500" style="color:var(--raisin-black); font-size:3rem;">0+</h3>
-                <p style="font-size: clamp(1.5rem, 3vw, 2rem);">Students</p>
+    <section class="stats-section">
+        <div class="section-header">
+            <h2 class="animate-on-scroll">Proven Track Record</h2>
+            <p class="section-subtitle animate-on-scroll">Real results from our growing community</p>
+        </div>
+
+        <div class="stats-grid">
+            <div class="stat-card animate-on-scroll">
+                <div class="stat-icon">
+                    <svg width="40" height="40" viewBox="0 0 24 24" fill="none">
+                        <path
+                            d="M17 21V19C17 17.9391 16.5786 16.9217 15.8284 16.1716C15.0783 15.4214 14.0609 15 13 15H5C3.93913 15 2.92172 15.4214 2.17157 16.1716C1.42143 16.9217 1 17.9391 1 19V21M23 21V19C22.9993 18.1137 22.7044 17.2528 22.1614 16.5523C21.6184 15.8519 20.8581 15.3516 20 15.13M16 3.13C16.8604 3.3503 17.623 3.8507 18.1676 4.55231C18.7122 5.25392 19.0078 6.11683 19.0078 7.005C19.0078 7.89317 18.7122 8.75608 18.1676 9.45769C17.623 10.1593 16.8604 10.6597 16 10.88M13 7C13 9.20914 11.2091 11 9 11C6.79086 11 5 9.20914 5 7C5 4.79086 6.79086 3 9 3C11.2091 3 13 4.79086 13 7Z"
+                            stroke="#ef233c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </div>
+                <h3 class="stat-number" data-target="500">0+</h3>
+                <p class="stat-label">Active Students</p>
+                <span class="stat-sublabel">Worldwide community</span>
             </div>
-            <div class="animate-on-scroll" style="width: 300px;">
-                <h3 class="stat-number" data-target="50" style="color:var(--raisin-black); font-size:3rem;">0+</h3>
-                <p style="font-size: clamp(1.5rem, 3vw, 2rem);">Problems</p>
+
+            <div class="stat-card animate-on-scroll">
+                <div class="stat-icon">
+                    <svg width="40" height="40" viewBox="0 0 24 24" fill="none">
+                        <path
+                            d="M9 5H7C5.89543 5 5 5.89543 5 7V19C5 20.1046 5.89543 21 7 21H17C18.1046 21 19 20.1046 19 19V7C19 5.89543 18.1046 5 17 5H15M9 5C9 6.10457 9.89543 7 11 7H13C14.1046 7 15 6.10457 15 5M9 5C9 3.89543 9.89543 3 11 3H13C14.1046 3 15 3.89543 15 5M12 12H15M12 16H15M9 12H9.01M9 16H9.01"
+                            stroke="#ef233c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </div>
+                <h3 class="stat-number" data-target="50">0+</h3>
+                <p class="stat-label">Expert Problems</p>
+                <span class="stat-sublabel">Curated challenges</span>
             </div>
-            <div class="animate-on-scroll" style="width: 300px;">
-                <h3 class="stat-number" data-target="30" style="color:var(--raisin-black); font-size:3rem;">0+</h3>
-                <p style="font-size: clamp(1.5rem, 3vw, 2rem);">Online Mentors</p>
+
+            <div class="stat-card animate-on-scroll">
+                <div class="stat-icon">
+                    <svg width="40" height="40" viewBox="0 0 24 24" fill="none">
+                        <path
+                            d="M12 14L21 9L12 4L3 9L12 14ZM12 14L18.16 10.55C18.68 11.96 19 13.46 19 15C19 15.66 18.95 16.32 18.86 16.96L21 18V11L12 14ZM12 14V20.5M6 12V17C6 17 6 20 12 20C18 20 18 17 18 17V12"
+                            stroke="#ef233c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </div>
+                <h3 class="stat-number" data-target="30">0+</h3>
+                <p class="stat-label">Online Mentors</p>
+                <span class="stat-sublabel">Expert guidance</span>
             </div>
         </div>
     </section>
 
-    <!-- Step-by-step learning flow -->
-    <section style="padding:4rem 2rem; text-align:center;">
-        <h2 class="animate-on-scroll" style="font-size: clamp(1.5rem, 5vw, 3rem);">How It Works</h2>
-        <div style="display:flex; flex-wrap:wrap; justify-content:center; gap:3rem; margin-top:2rem;">
+    <section id="how-it-works" class="how-it-works">
+        <div class="section-header">
+            <h2 class="animate-on-scroll">Your Path to Mastery</h2>
+            <p class="section-subtitle animate-on-scroll">Three simple steps to transform your learning</p>
+        </div>
 
-            <div class="animate-on-scroll"
-                style="background-color:var(--main-color);max-width:400px;height: 600px; display: flex; flex-direction: column;justify-content: space-evenly; align-items: center; border: 2px solid var(--main-color); border-radius: 20px; padding: 2rem;">
-                <img src="./images/learningBooks.svg" alt="Step 1" style="height: 20%; margin-bottom:1rem;">
-                <h3
-                    style="color:var(--accent-color); font-size:3rem; margin: 0; font-family: 'DynaPuff', cursive; font-weight: 400;">
-                    Learn
-                </h3>
-                <p style="font-size: clamp(1.1rem, 3vw, 1.4rem); color: var(--secondary-color);">
-                    Choose a topic and start solving problems designed to teach concepts progressively.
-                </p>
+        <div class="steps-container">
+            <div class="step-card animate-on-scroll">
+                <div class="step-number">01</div>
+                <div class="step-icon">
+                    <img src="./images/learningBooks.svg" alt="Learn">
+                </div>
+                <h3>Learn</h3>
+                <p>Choose a topic and start solving problems designed to teach concepts progressively from foundations
+                    to advanced challenges.</p>
             </div>
 
-
-            <div class="animate-on-scroll"
-                style="background-color:var(--main-color);max-width:400px;height: 600px;  padding: 2rem;display: flex; flex-direction: column;justify-content: space-evenly; align-items: center; border: 2px solid var(--main-color); border-radius: 20px;">
-                <img src="./images/studying.svg" alt="Step 2" style="height: 20%; margin-bottom:1rem;">
-                <h3
-                    style="color:var(--accent-color); font-size:3rem; margin: 0; font-family: 'DynaPuff', cursive; font-weight: 400;">
-                    Practice
-                </h3>
-                <p style="font-size: clamp(1.1rem, 3vw, 1.4rem); color: var(--secondary-color);">
-                    Solve challenges online with instant feedback and hints from mentors.
-                </p>
+            <div class="step-connector animate-on-scroll">
+                <svg width="100" height="4" viewBox="0 0 100 4" fill="none">
+                    <path d="M0 2H100" stroke="url(#gradient)" stroke-width="2" stroke-dasharray="5 5" />
+                    <defs>
+                        <linearGradient id="gradient" x1="0" y1="0" x2="100" y2="0">
+                            <stop offset="0%" stop-color="#ef233c" stop-opacity="0.3" />
+                            <stop offset="100%" stop-color="#ef233c" stop-opacity="1" />
+                        </linearGradient>
+                    </defs>
+                </svg>
             </div>
 
+            <div class="step-card animate-on-scroll">
+                <div class="step-number">02</div>
+                <div class="step-icon">
+                    <img src="./images/studying.svg" alt="Practice">
+                </div>
+                <h3>Practice</h3>
+                <p>Solve challenges online with instant feedback, intelligent hints, and expert guidance from
+                    experienced mentors.</p>
+            </div>
 
-            <div class="animate-on-scroll"
-                style="background-color:var(--main-color);max-width:400px; height: 600px;  padding: 2rem;display: flex; flex-direction: column;justify-content: space-evenly; align-items: center;border: 2px solid var(--main-color); border-radius: 20px;">
-                <img src="./images/achievementsDD.svg" alt="Step 3" style="height: 20%;margin-bottom:1rem;">
-                <h3
-                    style="color:var(--accent-color); font-size:3rem; margin: 0; font-family: 'DynaPuff', cursive; font-weight: 400;">
-                    Achieve
+            <div class="step-connector animate-on-scroll">
+                <svg width="100" height="4" viewBox="0 0 100 4" fill="none">
+                    <path d="M0 2H100" stroke="url(#gradient)" stroke-width="2" stroke-dasharray="5 5" />
+                </svg>
+            </div>
 
-                </h3>
-                <p style="font-size: clamp(1.1rem, 3vw, 1.4rem); color: var(--secondary-color);">
-                    Collect badges, points, and track your mastery as you progress through levels.
-                </p>
+            <div class="step-card animate-on-scroll">
+                <div class="step-number">03</div>
+                <div class="step-icon">
+                    <img src="./images/achievementsDD.svg" alt="Achieve">
+                </div>
+                <h3>Achieve</h3>
+                <p>Collect badges, earn points, and track your mastery as you progress through levels and unlock
+                    achievements.</p>
             </div>
         </div>
     </section>
 
-    <section
-        style="padding:2rem 2rem; text-align:center; background-color:var(--secondary-color); border-radius:12px; margin:2rem; height: auto; display: flex; flex-direction: column; justify-content: space-around;">
+    <section class="cta-section">
+        <div class="cta-container">
+            <div class="cta-content">
+                <span class="cta-badge">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+                        <path d="M8 1L10 5.5L15 6L11.5 9.5L12.5 15L8 12L3.5 15L4.5 9.5L1 6L6 5.5L8 1Z" />
+                    </svg>
+                    Early Access Available
+                </span>
+                <h2>Ready to Master Logic?</h2>
+                <p>Join 1000+ students transforming their problem-solving skills. Get exclusive early access with bonus
+                    achievements.</p>
 
-        <h2 style="margin: 0; font-size: clamp(1.5rem, 4vw, 2rem); font-weight: 600;">Start Your Journey Today</h2>
+                <div class="cta-benefits">
+                    <div class="benefit-item">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path
+                                d="M9 12L11 14L15 10M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z"
+                                stroke="#4ade80" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                        <span>Free for early members</span>
+                    </div>
+                    <div class="benefit-item">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path
+                                d="M9 12L11 14L15 10M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z"
+                                stroke="#4ade80" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                        <span>Exclusive achievements</span>
+                    </div>
+                    <div class="benefit-item">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path
+                                d="M9 12L11 14L15 10M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z"
+                                stroke="#4ade80" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                        <span>Priority mentor access</span>
+                    </div>
+                </div>
 
-        <p style="color: goldenrod; font-size: clamp(1.2rem, 3vw, 1.5rem); margin: 0.7rem 0rem 3rem 0;">Mentor spots are
-            limited and early access
-            <br>
-            gives you bonus achievements. Don't miss out!
-        </p>
+                <a class="btn-cta"
+                    href="https://docs.google.com/forms/d/e/1FAIpQLSdLLApMvE_dJdllHd0U4YxFFQ6K7YasS4I-xO1mDG9SFCariw/viewform"
+                    target="_blank" rel="noopener noreferrer">
+                    Join the Waitlist Now
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <path d="M4 10H16M16 10L10 4M16 10L10 16" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </a>
 
-        <a class="btn-primari"
-            href="https://docs.google.com/forms/d/e/1FAIpQLSdLLApMvE_dJdllHd0U4YxFFQ6K7YasS4I-xO1mDG9SFCariw/viewform"
-            target="_blank" style="font-size: 1.7rem;">Join the Waitlist</a>
-
+                <p class="cta-note">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+                        <path
+                            d="M8 0C3.58 0 0 3.58 0 8C0 12.42 3.58 16 8 16C12.42 16 16 12.42 16 8C16 3.58 12.42 0 8 0ZM7 4H9V6H7V4ZM9 12H7V7H9V12Z" />
+                    </svg>
+                    Limited spots remaining — Join now to secure your place
+                </p>
+            </div>
+        </div>
     </section>
 
     <footer>
-        &copy; 2025 Equathora. All rights reserved. | <a
-            href="https://docs.google.com/forms/d/e/1FAIpQLSdLLApMvE_dJdllHd0U4YxFFQ6K7YasS4I-xO1mDG9SFCariw/viewform"
-            target="_blank">Join the
-            Waitlist</a>
+        <div class="footer-content">
+            <div class="footer-brand">
+                <img src="./images/logo/TransparentSymbol.png" alt="Equathora" class="footer-logo">
+                <span class="footer-logo-text">Equathora</span>
+            </div>
+            <p class="footer-tagline">Turn Logic into Your Superpower</p>
+            <div class="footer-links">
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSdLLApMvE_dJdllHd0U4YxFFQ6K7YasS4I-xO1mDG9SFCariw/viewform"
+                    target="_blank" rel="noopener noreferrer">Join Waitlist</a>
+                <span class="footer-divider">•</span>
+                <a href="#features">Features</a>
+                <span class="footer-divider">•</span>
+                <a href="#trust">Reviews</a>
+            </div>
+            <p class="footer-copyright">&copy; 2025 Equathora. All rights reserved.</p>
+        </div>
     </footer>
 
     <!-- External JavaScript -->
